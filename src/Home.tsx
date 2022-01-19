@@ -1,3 +1,6 @@
+import Mint from "./Components/Mint";
+import NavMint from "./Components/Navbar/NavMint";
+import Info from "./Components/Info";
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 import confetti from "canvas-confetti";
@@ -49,6 +52,8 @@ const MintButtonContainer = styled.div`
     color: #464646;
   }
 
+
+
   button.MuiButton-contained:not(.MuiButton-containedPrimary):hover,
   button.MuiButton-contained:not(.MuiButton-containedPrimary):focus {
     -webkit-animation: pulse 1s;
@@ -99,6 +104,8 @@ const WalletAmount = styled.div`
 
 const ConnectButton = styled(WalletMultiButton)`
 `;
+
+
 const Logo = styled.div`
   flex: 0 0 auto;
 
@@ -160,6 +167,7 @@ const Wallet = styled.ul`
   margin: 0;
   padding: 0;
 `;
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -241,11 +249,13 @@ export interface HomeProps {
     rpcHost: string;
 }
 
+
 const Home = (props: HomeProps) => {
+
+
     const [balance, setBalance] = useState<number>();
-    const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-    const [isActive, setIsActive] = useState(false); // true when countdown completes or whitelisted
-    const [solanaExplorerLink, setSolanaExplorerLink] = useState("");
+    const [isMinting, setIsMinting] = useState(false);
+    const [isActive, setIsActive] = useState(false); 
     const [itemsAvailable, setItemsAvailable] = useState(0);
     const [itemsRedeemed, setItemsRedeemed] = useState(0);
     const [itemsRemaining, setItemsRemaining] = useState(0);
@@ -254,6 +264,7 @@ const Home = (props: HomeProps) => {
     const [whitelistPrice, setWhitelistPrice] = useState(0);
     const [whitelistEnabled, setWhitelistEnabled] = useState(false);
     const [whitelistTokenBalance, setWhitelistTokenBalance] = useState(0);
+    const [solanaExplorerLink, setSolanaExplorerLink] = useState("");
 
     const [alertState, setAlertState] = useState<AlertState>({
         open: false,
@@ -436,31 +447,25 @@ const Home = (props: HomeProps) => {
 
     return (
         <main>
+        <NavMint />
+        <Mint />
+        <Info 
+            itemsAvailable={itemsAvailable}
+            itemsRedeemed={itemsRedeemed}
+            price={price}
+            balance={balance}
+        />        
             <MainContainer>
                 <WalletContainer>
-                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt="" src="logo.png"/></a></Logo>
-                    <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
-                        </li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
-                    </Menu>
                     <Wallet>
                         {wallet ?
                             <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle>MINT IS LIVE !</ShimmerTitle>
-                <br/>
-
-
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
                             <br/>
                             <div><Price label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " SOL") : (price + " SOL")}/><Image
                                 src="cool-cats.gif"
@@ -531,35 +536,6 @@ const Home = (props: HomeProps) => {
                                 Explorer</SolExplorerLink>}
                         </NFT>
                     </DesContainer>
-                    <DesContainer>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
-                    </DesContainer>
                 </MintContainer>
             </MainContainer>
             <Snackbar
@@ -574,7 +550,11 @@ const Home = (props: HomeProps) => {
                     {alertState.message}
                 </Alert>
             </Snackbar>
+        
+        
+
         </main>
+        
     );
 };
 

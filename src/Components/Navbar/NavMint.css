@@ -1,0 +1,13 @@
+navbar {
+    flex-basis: auto;
+    min-height: min-content;
+    display: flex;
+    white-space: pre;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0px 100px 0px 100px;
+    flex-shrink: 0;
+    background-color: #222222;
+}
+

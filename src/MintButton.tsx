@@ -25,6 +25,7 @@ export const MintButton = ({
     isMinting: boolean;
     isActive: boolean;
     isSoldOut: boolean;
+    
 }) => {
     const {requestGatewayToken, gatewayStatus} = useGateway();
     const [clicked, setClicked] = useState(false);

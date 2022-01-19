@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('//db.onlinewebfonts.com/c/47d5fd8c3738de46ef0b3fe3f68c289a?family=Perfect+DOS+VGA+437');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
+
+container {
+    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 100000;
+    flex-basis: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: 540px;
+}
+
+page{
+    align-items: flex-start;
+    width: 100%;
+    flex-grow: 100000;
+    flex-basis: 0%;
+    min-height: min-content;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 100px 0px 100px;
+}
+
+hdfont {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 40px;
+    bottom: 0;
+    line-height: 56px;
+    font-style: normal;
+}
+
+psfont {
+    font-family: 'Perfect DOS VGA 437';
+    color: white;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 400px;
+}
+
+pfont {
+    font-family: 'IBM Plex Mono';
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+dfont {
+    font-family: 'IBM Plex Mono';
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+hd {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+mbutton {
+    margin-top: 60px;
+    align-self: flex-start;
+    flex-basis: 0px;
+    min-height: min-content;
+    align-items: center;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    white-space: pre;
+    width: auto;
+    font-family: 'IBM Plex Mono';
+    color: white;
+    background-color: black;
+    border: #00FF0A;
+    border-style: solid;
+    border-width: 4px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+subfont {
+    margin-top: 30px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 24px;
+    bottom: 0;
+    line-height: 56px;
+    font-style: normal;
+}
