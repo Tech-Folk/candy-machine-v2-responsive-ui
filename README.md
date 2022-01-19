@@ -1,5 +1,5 @@
 ```
-git clone 
+git clone https://github.com/Tech-Folk/candy-machine-v2-responsive-ui.git
 ```
 
 #### 2. Define your environment variables (.env file)
