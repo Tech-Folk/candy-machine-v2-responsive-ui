@@ -11,7 +11,9 @@ export const CTAButton = styled(Button)`
   padding: 0px !important;
   border-radius: 0px !important;
   background-color: black !important;
-  border: white !important;
+  border-style: solid !important;
+  border: 4px !important;
+  border-color: white !important;
   color: white !important;
   display: flex !important;
   justify-content: center !important;
@@ -48,7 +50,7 @@ export const MintButton = ({
     }, [gatewayStatus, clicked, setClicked, onMint]);
 
     return (
-        <CTAButton
+        <CTAButton 
             disabled={
                 candyMachine?.state.isSoldOut || isSoldOut ||
                 isMinting ||

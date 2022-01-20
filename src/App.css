@@ -9,6 +9,7 @@
 
 body{
   background-color:var(--main-background-color);
+  height: 100%;
 }
 
 h2, p{
@@ -21,7 +22,7 @@ font-weight: normal;
 
 .MuiFab-extended{
   height: auto;
-  padding-right: 0 !important;
+  padding-right: 0;
 }
 
 .MuiFab-label{
@@ -29,7 +30,7 @@ font-weight: normal;
 }
 
 .MuiPaper-root{
-  background-color: var(--card-background-color) !important;
+  background-color: var(--card-background-color);
 }
 
 .MuiButton-containedPrimary:not(.MuiButton-fullWidth){
@@ -42,10 +43,9 @@ font-weight: normal;
 }
 
 .MuiLinearProgress-colorPrimary{
-  background-color:var(--main-text-color) !important;
+  background-color:var(--main-text-color);
 }
 
 .MuiLinearProgress-barColorPrimary{
-  background-color:var(--title-text-color) !important;
+  background-color:var(--title-text-color);
 }
-

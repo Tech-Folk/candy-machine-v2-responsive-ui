@@ -11,7 +11,7 @@ const NavMint = ({ConnectButton, WalletContainer, Wallet, wallet, WalletAmount, 
                 <Wallet>
                     {wallet ?
                         <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
-                        <ConnectButton>Connect</ConnectButton>}
+                        <ConnectButton>Connect Wallet</ConnectButton>}
                 </Wallet>
             </WalletContainer>
         </navbar>

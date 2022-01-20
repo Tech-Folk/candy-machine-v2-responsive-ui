@@ -107,7 +107,9 @@ const ConnectButton = styled(WalletMultiButton)`
   border-radius: 0px !important;
   padding: 0px !important;
   background-color: black !important;
-  border: #00FF0A !important;
+  border: 4px !important;
+  border-color: #00FF0A !important;
+  border-style: solid !important;
 `;
 
 // const Logo = styled.div`
@@ -471,7 +473,7 @@ const Home = (props: HomeProps) => {
                       renderer={renderCounter}
                   />) : (
                   !wallet ? (
-                          <ConnectButton style={{'borderRadius': 0 + 'px'}}>Connect Wallet</ConnectButton>
+                          <ConnectButton>Connect Wallet</ConnectButton>
                       ) :
                       candyMachine?.state.gatekeeper &&
                       wallet.publicKey &&
@@ -511,7 +513,6 @@ const Home = (props: HomeProps) => {
                           />
                       ))}
         </MintButtonContainer>
-        <br/>
         <Info 
             itemsAvailable={itemsAvailable}
             itemsRedeemed={itemsRedeemed}
