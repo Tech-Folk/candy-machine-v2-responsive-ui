@@ -452,7 +452,7 @@ const Home = (props: HomeProps) => {
     ]);
 
     return (
-        <main>
+        <>
         <NavMint
           ConnectButton={ConnectButton}
           WalletContainer={WalletContainer}
@@ -519,7 +519,6 @@ const Home = (props: HomeProps) => {
             price={price}
             balance={balance}
         />
-        <MntFoot />
             <Snackbar
                 open={alertState.open}
                 autoHideDuration={6000}
@@ -532,7 +531,8 @@ const Home = (props: HomeProps) => {
                     {alertState.message}
                 </Alert>
             </Snackbar>
-        </main>
+            <MntFoot />
+        </>
     );
 };
 
