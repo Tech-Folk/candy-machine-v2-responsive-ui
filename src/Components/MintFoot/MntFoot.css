@@ -6,8 +6,8 @@ ftbar {
     flex-direction: column;
     white-space: pre;
     position: relative;
+    bottom: 0;
     flex-basis: auto;
-    resize: none;
     box-sizing: border-box;
     height: 48px;
     background-color: #222222;

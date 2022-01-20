@@ -2,9 +2,9 @@ import "./MntFoot.css"
 
 function MntFoot() {
   return (
-   <ftbar>
-       
-   </ftbar>
+   <footer>
+       <ftbar></ftbar>
+   </footer>
   )
 }
 
