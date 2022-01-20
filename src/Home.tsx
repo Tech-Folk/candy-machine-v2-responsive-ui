@@ -105,7 +105,7 @@ const WalletAmount = styled.div`
 const ConnectButton = styled(WalletMultiButton)`
   font-family: 'IBM Plex Mono' !important;
   border-radius: 0px !important;
-  padding: 0px !important;
+  padding: 0px 3px 0px 3px !important;
   background-color: black !important;
   border: 4px !important;
   border-color: #00FF0A !important;
