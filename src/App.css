@@ -33,7 +33,7 @@ font-weight: normal;
 }
 
 .MuiButton-containedPrimary:not(.MuiButton-fullWidth){
-  border-radius: 24px !important;
+  border-radius: 0px;
   padding: 6px 16px;
 }
 
