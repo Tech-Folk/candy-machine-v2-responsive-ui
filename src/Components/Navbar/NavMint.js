@@ -1,19 +1,19 @@
-import Home from "../../Home";
 import "./NavMint.css";
-import styled from "styled-components";
 import techfolk_logotype from "./techfolk_logotype.svg"
-import { WalletMultiButton } from "@solana/wallet-adapter-material-ui";
 
 
-const ConnectButton = styled(WalletMultiButton)`
-`;
 
-
-const NavMint = () => {
+const NavMint = ({ConnectButton, WalletContainer, Wallet, wallet, WalletAmount, balance}) => {
     return (
         <navbar >
             <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img src={techfolk_logotype} alt = "Techfolk Logo" /></a>
-            <ConnectButton>Connect</ConnectButton>
+            <WalletContainer>
+                <Wallet>
+                    {wallet ?
+                        <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
+                        <ConnectButton>Connect</ConnectButton>}
+                </Wallet>
+            </WalletContainer>
         </navbar>
     )
 }

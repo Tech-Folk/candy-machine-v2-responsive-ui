@@ -11,3 +11,25 @@ navbar {
     background-color: #222222;
 }
 
+.mint {
+    margin-top: 60px  !important;
+    align-self: flex-start !important ;
+    flex-basis: 0px !important;
+    min-height: min-content !important;
+    align-items: center !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    white-space: pre !important;
+    width: auto !important;
+    font-family: 'IBM Plex Mono' !important;
+    color: white !important;
+    background-color: black !important;
+    border: #00FF0A !important;
+    border-style: solid !important;
+    border-width: 4px !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+}
+

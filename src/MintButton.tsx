@@ -7,13 +7,17 @@ import {CandyMachine} from './candy-machine';
 
 
 export const CTAButton = styled(Button)`
-  display: block !important;
-  margin: 0 auto !important;
-  background-color: var(--title-text-color) !important;
-  font-size: 1.2em;
+  font-family: 'IBM Plex Mono' !important;
+  padding: 0px !important;
+  border-radius: 0px !important;
+  background-color: black !important;
+  border: white !important;
+  color: white !important;
+  display: flex !important;
+  justify-content: center !important;
 `;
 
-export const MintButton = ({
+export const MintButton = ({ 
                                onMint,
                                candyMachine,
                                isMinting,
@@ -72,7 +76,7 @@ export const MintButton = ({
                     isMinting ? (
                         <CircularProgress/>
                     ) : (
-                        "MINT"
+                        "Mint"
                     )
             ) : (candyMachine?.state.goLiveDate ? (
                 "SOON"

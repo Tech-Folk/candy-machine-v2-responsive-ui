@@ -1,0 +1,11 @@
+ftbar {
+    flex-basis: auto;
+    min-height: min-content;
+    display: flex;
+    white-space: pre;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: #222222;
+}
