@@ -12,8 +12,8 @@ import {WalletMultiButton} from "@solana/wallet-adapter-material-ui";
 import {GatewayProvider} from '@civic/solana-gateway-react';
 import Countdown from "react-countdown";
 import {Snackbar, Paper, 
-  // LinearProgress, 
-  // Chip
+  LinearProgress, 
+  Chip
 } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import {toDate, AlertState, getAtaForMint} from './utils';
@@ -35,14 +35,14 @@ const WalletContainer = styled.div`
   justify-content: center;
 
 `;
-// const NFT = styled(Paper)`
-//   min-width: 200px;
-//   flex: 1 1 auto;
-// `;
-// const Des = styled(NFT)`
-//   text-align: left;
-//   padding-top: 0px;
-// `;
+const NFT = styled(Paper)`
+  min-width: 200px;
+  flex: 1 1 auto;
+`;
+const Des = styled(NFT)`
+  text-align: left;
+  padding-top: 0px;
+`;
 
 const Card = styled(Paper)`
   display: inline-block;
@@ -115,141 +115,141 @@ const ConnectButton = styled(WalletMultiButton)`
   border-style: solid !important;
 `;
 
-// const Logo = styled.div`
-//   flex: 0 0 auto;
+const Logo = styled.div`
+  flex: 0 0 auto;
 
-//   img {
-//     height: 60px;
-//   }
-// `;
+  img {
+    height: 60px;
+  }
+`;
 
-// const Menu = styled.ul`
-//   list-style: none;
-//   display: inline-flex;
-//   flex: 1 0 auto;
+const Menu = styled.ul`
+  list-style: none;
+  display: inline-flex;
+  flex: 1 0 auto;
 
-//   li {
-//     margin: 0 12px;
+  li {
+    margin: 0 12px;
 
-//     a {
-//       color: var(--main-text-color);
-//       list-style-image: none;
-//       list-style-position: outside;
-//       list-style-type: none;
-//       outline: none;
-//       text-decoration: none;
-//       text-size-adjust: 100%;
-//       touch-action: manipulation;
-//       transition: color 0.3s;
-//       padding-bottom: 15px;
+    a {
+      color: var(--main-text-color);
+      list-style-image: none;
+      list-style-position: outside;
+      list-style-type: none;
+      outline: none;
+      text-decoration: none;
+      text-size-adjust: 100%;
+      touch-action: manipulation;
+      transition: color 0.3s;
+      padding-bottom: 15px;
 
-//       img {
-//         max-height: 26px;
-//       }
-//     }
+      img {
+        max-height: 26px;
+      }
+    }
 
-//     a:hover, a:active {
-//       color: rgb(131, 146, 161);
-//       border-bottom: 4px solid var(--title-text-color);
-//     }
+    a:hover, a:active {
+      color: rgb(131, 146, 161);
+      border-bottom: 4px solid var(--title-text-color);
+    }
 
-//   }
-// `;
+  }
+`;
 
-// const SolExplorerLink = styled.a`
-//   color: var(--title-text-color);
-//   border-bottom: 1px solid var(--title-text-color);
-//   font-weight: bold;
-//   list-style-image: none;
-//   list-style-position: outside;
-//   list-style-type: none;
-//   outline: none;
-//   text-decoration: none;
-//   text-size-adjust: 100%;
+const SolExplorerLink = styled.a`
+  color: var(--title-text-color);
+  border-bottom: 1px solid var(--title-text-color);
+  font-weight: bold;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  outline: none;
+  text-decoration: none;
+  text-size-adjust: 100%;
   
-//   :hover{
-//     border-bottom: 2px solid var(--title-text-color);
-//   }
-// `;
+  :hover{
+    border-bottom: 2px solid var(--title-text-color);
+  }
+`;
 
 const Wallet = styled.ul`
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
 `;
-// const MainContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   margin-top: 20px;
-//   margin-bottom: 20px;
-//   margin-right: 4%;
-//   margin-left: 4%;
-//   text-align: center;
-//   justify-content: center;
-// `;
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 4%;
+  margin-left: 4%;
+  text-align: center;
+  justify-content: center;
+`;
 
-// const MintContainer = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   flex: 1 1 auto;
-//   flex-wrap: wrap;
-//   gap: 20px;
-// `;
+const MintContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
 
-// const DesContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   flex: 1 1 auto;
-//   gap: 20px;
-// `;
+const DesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 20px;
+`;
 
-// const Price = styled(Chip)`
-//   position: absolute;
-//   margin: 5px;
-//   font-weight: bold;
-//   font-size: 1em !important;
-// `;
+const Price = styled(Chip)`
+  position: absolute;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 1em !important;
+`;
 
-// const Image = styled.img`
-//   height: 400px;
-//   width: auto;
-//   border-radius: 20px;
-// `;
+const Image = styled.img`
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+`;
 
-// const BorderLinearProgress = styled(LinearProgress)`
-//   margin: 20px 0;
-//   height: 10px !important;
-//   border-radius: 5px;
-// `;
+const BorderLinearProgress = styled(LinearProgress)`
+  margin: 20px 0;
+  height: 10px !important;
+  border-radius: 5px;
+`;
 
-// const ShimmerTitle = styled.h1`
-//   margin: 50px auto;
-//   text-transform: uppercase;
-//   animation: glow 2s ease-in-out infinite alternate;
-//   color: var(--main-text-color);
-//   @keyframes glow {
-//     from {
-//       text-shadow: 0 0 20px var(--main-text-color);
-//     }
-//     to {
-//       text-shadow: 0 0 30px var(--title-text-color), 0 0 10px var(--title-text-color);
-//     }
-//   }
-// `;
+const ShimmerTitle = styled.h1`
+  margin: 50px auto;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  color: var(--main-text-color);
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px var(--main-text-color);
+    }
+    to {
+      text-shadow: 0 0 30px var(--title-text-color), 0 0 10px var(--title-text-color);
+    }
+  }
+`;
 
-// const GoldTitle = styled.h2`
-//   color: var(--title-text-color);
-// `;
+const GoldTitle = styled.h2`
+  color: var(--title-text-color);
+`;
 
-// const LogoAligner = styled.div`
-//   display: flex;
-//   align-items: center;
+const LogoAligner = styled.div`
+  display: flex;
+  align-items: center;
 
-//   img {
-//     max-height: 35px;
-//     margin-right: 10px;
-//   }
-// `;
+  img {
+    max-height: 35px;
+    margin-right: 10px;
+  }
+`;
 
 export interface HomeProps {
     candyMachineId: anchor.web3.PublicKey;
