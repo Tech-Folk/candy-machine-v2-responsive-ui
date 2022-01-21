@@ -22,3 +22,8 @@ ftbar {
 ftlink {
     text-decoration: none !important;
 }
+
+center {
+    align-items: center;
+    justify-content: center;
+}
