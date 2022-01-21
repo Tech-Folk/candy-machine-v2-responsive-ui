@@ -1,6 +1,6 @@
 import "./Info.css"
 
-const Info = ({itemsAvailable, itemsRedeemed, price, balance}) => {
+const Info = ({itemsRemaining, itemsRedeemed, price, balance}) => {
   return (
   
     <ipage>
@@ -9,7 +9,7 @@ const Info = ({itemsAvailable, itemsRedeemed, price, balance}) => {
               <pfont style = {{marginTop : 30}}>Cost of each Tech Folk Nft </pfont>
               <dfont>{price}</dfont>
               <pfont>Folks still available to mint</pfont>
-              <dfont>{itemsAvailable}</dfont>
+              <dfont>{itemsRemaining}</dfont>
               <pfont>Total Folk minted</pfont>
               <dfont>{itemsRedeemed}</dfont>
               <pfont>Total balance of Sol in your wallet</pfont>

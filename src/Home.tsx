@@ -514,7 +514,7 @@ const Home = (props: HomeProps) => {
                       ))}
         </MintButtonContainer>
         <Info 
-            itemsAvailable={itemsAvailable}
+            itemsRemaining={itemsRemaining}
             itemsRedeemed={itemsRedeemed}
             price={price}
             balance={balance}
