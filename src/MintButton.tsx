@@ -7,13 +7,13 @@ import {CandyMachine} from './candy-machine';
 
 
 export const CTAButton = styled(Button)`
+  border: 4px !important;
   font-family: 'IBM Plex Mono' !important;
   padding: 0px !important;
   border-radius: 0px !important;
   background-color: black !important;
   border-style: solid !important;
-  border: 4px !important;
-  border-color: white !important;
+  border-color: #00FF0A !important;
   color: white !important;
   display: flex !important;
   justify-content: center !important;
