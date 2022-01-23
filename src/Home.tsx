@@ -400,7 +400,7 @@ const Home = (props: HomeProps) => {
                 } else {
                     setAlertState({
                         open: true,
-                        message: 'Mint failed! Please try again! Make sure you have the whitelist SPL-token!',
+                        message: 'Mint failed! Please try again!',
                         severity: 'error',
                     });
                 }
